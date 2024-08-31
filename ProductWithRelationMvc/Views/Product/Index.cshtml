@@ -1,0 +1,13 @@
+﻿@model List<Product>
+
+<h1>Product Index</h1>
+<a asp-action="Create">Create</a>
+
+
+@foreach (var product in Model)
+{
+    <h2>@product.Title</h2>
+
+    // Showing the category name related to the product
+    <h3>@product.Category?.Name</h3>
+}

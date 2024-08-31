@@ -1,0 +1,23 @@
+﻿@model Product
+
+
+<h1>Create</h1>
+
+<form method="post" asp-action="Create">
+    <input asp-for="Title" />
+
+     @* Mapping over category list which comes from ViewBag.categories *@
+    <select asp-for="CategoryId">
+        @foreach (var category in ViewBag.categories)
+        {
+            <option value="@category.Id">@category.Name</option>
+        }
+    </select>
+
+
+    @* Using ViewBag.categories that gets the category list but using new SelectList() class from controller, uncomment the line blowe in order to use it *@
+    @* <select asp-for="CategoryId" asp-items="@ViewBag.categories"></select> *@
+
+
+    <button type="submit">Add new Product</button>
+</form>

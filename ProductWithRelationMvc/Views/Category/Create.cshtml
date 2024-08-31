@@ -1,0 +1,11 @@
+﻿@model Category
+
+
+
+<h1>Create category</h1>
+
+<form method="post" asp-action="Create">
+    <input asp-for="Name" placeholder="Category name..." />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <button type="submit">add category</button>
+</form>

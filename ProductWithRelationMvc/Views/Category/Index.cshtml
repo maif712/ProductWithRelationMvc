@@ -1,0 +1,11 @@
+﻿@model List<Category>
+
+
+<h1>Category Index</h1>
+<a asp-action="Create">Create</a>
+
+
+@foreach (var cate in Model)
+{
+    <h2>@cate.Name</h2>
+}
